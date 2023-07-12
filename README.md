@@ -110,7 +110,7 @@ Todas as funções possuem um cabeçalho informando o seu tipo (Depósito, Saque
             print(f'\nOperação realizada com sucesso. \nSaldo Atual: R$ {self.saldo:.2f}')
 ```
 
-A função **exibir_extrato()** utilizou **enumerates** para facilitar a impressão dos dados na tela. Como se tratam de dados com chave e valor, adicionou-se um laço **for** com dois contadores, assim, é possível imprimir o número do depósito e a quantia adicionada na conta:
+A função **exibir_extrato()** utilizou **enumerates** para facilitar a impressão dos dados na tela:
 
 ```python
  if self.depositos:            
@@ -118,6 +118,8 @@ A função **exibir_extrato()** utilizou **enumerates** para facilitar a impress
                 print(f'Depósito {i}: R$ {deposito:.2f}')
             print('---------------------------')
 ```
+
+Como se tratam de dados com chave e valor, adicionou-se um laço **for** com dois contadores, assim, é possível imprimir o número do depósito e a quantia adicionada na conta:
 
 <img style = "width: 300px" src="./Assets/Extrato.PNG" alt = "Extrato - Exemplo de Formatação">
 

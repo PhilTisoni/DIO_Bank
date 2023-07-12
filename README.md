@@ -73,7 +73,7 @@ O código está divido em 4 partes: Menu, Funções do Sistema, Funções Bancá
 
 A lógica central do programa está na função **exibir()** da classe **Menu**, ele mostra as opções propostas pelo desafio e realiza algumas validações.
 
-<img style = "width: 500px" src="./Assets/Menu.PNG" alt = "Menu">
+<img style = "width: 300px" src="./Assets/Menu.PNG" alt = "Menu">
 
 ## Funções do Sistema
 
@@ -119,7 +119,7 @@ A função **exibir_extrato()** utilizou **enumerates** para facilitar a impress
             print('---------------------------')
 ```
 
-<img style = "width: 500px" src="./Assets/Extrato.PNG" alt = "Extrato - Exemplo de Formatação">
+<img style = "width: 300px" src="./Assets/Extrato.PNG" alt = "Extrato - Exemplo de Formatação">
 
 
 ## Exemplo
@@ -139,8 +139,8 @@ menu.exibir()
 
 # Próximos Passos
 
-- [] Separar as funções em classes
-- [] Incluir implementações do Desafio 2 após a finalização das aulas
+- [ ] Separar as funções em classes
+- [ ] Incluir implementações do Desafio 2 após a finalização das aulas
 
 
 # Autor

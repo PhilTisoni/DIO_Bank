@@ -2,12 +2,12 @@ import os
 
 
 class Menu:
-    def __init__(self, saldo, depositos, saques, limite_diario, quantidade_saques):
+    def __init__(self, saldo, depositos, saques, limite_diario, quantidade_saques_realizados):
         self.saldo = saldo
         self.depositos = depositos
         self.saques = saques
         self.limite_diario = limite_diario
-        self.quantidade_saques = quantidade_saques
+        self.quantidade_saques_realizados = quantidade_saques_realizados
 
     def exibir(self):
         while True:
@@ -80,7 +80,7 @@ class Menu:
 
         self.saldo -= saque
         self.saques.append(saque)
-        self.quantidade_saques += 1
+        self.quantidade_saques_realizados += 1
         print(f'\nOperação realizada com sucesso.\nSaldo Atual: R$ {self.saldo:.2f}')
        
     def exibir_extrato(self):
@@ -109,5 +109,5 @@ saques = []
 limite_diario = 500.00
 quantidade_saques_realizados = 0
 
-menu = Menu(saldo, depositos, saques, limite_diario, quantidade_saques)
+menu = Menu(saldo, depositos, saques, limite_diario, quantidade_saques_realizados)
 menu.exibir()

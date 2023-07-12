@@ -74,7 +74,7 @@ class Menu:
             print('\nOperação inválida.\nVocê excedeu o limite máximo de R$ 500.00.')            
             return
 
-        if self.quantidade_saques >= 3:
+        if self.quantidade_saques_realizados >= 3:
             print('\nOperação inválida.\nVocê excedeu a quantia de 3 saques diários.')            
             return
 
@@ -107,7 +107,7 @@ saldo = 100.00
 depositos = []
 saques = []
 limite_diario = 500.00
-quantidade_saques = 0
+quantidade_saques_realizados = 0
 
 menu = Menu(saldo, depositos, saques, limite_diario, quantidade_saques)
 menu.exibir()

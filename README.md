@@ -5,19 +5,18 @@
 
 # Sobre o Projeto
 
-Desenolvido em Julho de 2023 durante o bootcamp **Potência Tech Powered by iFood | Ciência de Dados com Python!** oeferecido pela **Digital Innovation One** em parceria com a **IFood**, o projeto apresenta uma aplicação console de um banco realizado em duas versões. A primeira possibilita as ações de Depósito, Saque e Extrato, enquanto a segunda, implementa as funções de Cadastro de Usuário, Cadastro de Conta e Listar Contas. Foram aplicados conceitos de orientação a objetos, seguindo as regras de negócio disponibilizadas durante o desafio.
+Desenolvido em Julho de 2023 durante o bootcamp **Potência Tech Powered by iFood | Ciência de Dados com Python!** oeferecido pela **Digital Innovation One (DIO)** em parceria com a **IFood**, o projeto apresenta uma aplicação console de um banco, sendo realizado em duas versões: A primeira apresenta ações de Depósito, Saque e Extrato, enquanto a segunda, implementa as funções de Cadastro Usuários e Conta, além de Listar as contas do sistema. Foram aplicados conceitos de orientação a objetos, seguindo as regras de negócio disponibilizadas pelo desafio.
 
 <details><summary>Versão 1</summary>
 
 # Índice
 
-- <a href = "#Regras-de-Negócio">Regras de Negócio</a>
+- <a href = "#Regras-de-Negócio-v1">Regras de Negócio v1</a>
 - <a href = "#Projeto-v1">Projeto v1</a>
-- <a href = "#Próximos-Passos">Próximos Passos</a>
-- <a href = "#Autor">Autor</a>
+- <a href = "##Implementações-para-a-Versão-2">Implementações para a Versão 2</a>
 
   
-# Regras de Negócio
+# Regras de Negócio v1
 
 Fomos contratados por um grande banco para desenvolver o seu novo sistema. Esse banco deseja modernizar suas operações e para isso escolheu a línguagem Python. Para a primeira versão do sistema, devemos implementar apenas 3 operações: depósito, saque e extrato. A primeira versão do projeto trabalha com apenas um usuário, dessa forma, não precisamos nos preocupar em identificar qual é o número da agência e conta bancária. 
 
@@ -37,7 +36,6 @@ Fomos contratados por um grande banco para desenvolver o seu novo sistema. Esse 
 - Essa operação deve listar todos os depósitos e saques realizados na conta
 - No fim da listagem, deve ser exibido o saldo atual da conta
 - Os valores devem ser exibidos utilizando o formato R$ xxxx.xx, por exemplo: 1500.45 = R$ 1500.45
-
 
 
 # Projeto v1
@@ -114,7 +112,7 @@ menu = Menu(saldo, depositos, saques, limite_diario, quantidade_saques)
 menu.exibir()
 ```
 
-# Próximos Passos
+# Implementações para a Versão 2
 
 - [x] Separar o código em funções
 - [x] Incluir implementações do Desafio 2 após a finalização das aulas
@@ -127,44 +125,42 @@ menu.exibir()
 
 # Índice
 
-- <a href = "#Regras-de-Negócio">Regras de Negócio</a>
+- <a href = "#Regras-de-Negócio-v2">Regras de Negócio v2</a>
 - <a href = "#Projeto-v2">Projeto v2</a>
-- <a href = "#Próximos-Passos">Próximos Passos</a>
-- <a href = "#Autor">Autor</a>
+- <a href = "##Implementações-para-a-Versão-3">Implementações para a Versão 3</a>
 
   
-# Regras de Negócio
+# Regras de Negócio v2
 
-Precisamos deixar nosso código mais modularizado, para isso, vamos criar funções para as operações existentes: Sacar, Depoistar e Visualizar Extrato. Além disso, para a versão 2 do nosso sistema, precisamos criar duas novas funções: Cadastrar Usuário (cliente do banco) e Cadastrar Conta (vincular com o usuário).
-
-Devemos criar funções para todas as operações do sistema. Cada função terá uma regra na passagem de argumento, o retorno e a forma de como serão chamadas pode ser definida por você da forma que achar melhor. Fique a vontade para criar mais funções como Listar Contas, por exemplo.
+Afim de deixar o código mais modularizado, será necessário criar funções para todas as operações existentes (Sacar, Depoistar e Extrato), além de incluir duas novas funções: Cadastrar Usuário (cliente do banco) e Cadastrar Conta (vincular com o usuário). Cada função terá uma regra na passagem de argumento, o retorno e a forma de como serão chamadas poderá ser definida pelo desenvolvedor:
 
 ## Depósito:
 
 - Deve ser possível depositar valores positivos para a conta bancária.
 - Todos os depósitos devem ser armazenados em uma variável e exibidos na operação de extrato
-- Receber argumentos apenas por posição (positional only)
+- **Receber argumentos apenas por posição (positional only)**
 
 ## Saque:
 
 - O sistema deve permitir realizar 3 saques diários com limite máximo de R$ 500.00 por saque
 - Caso o usuário não tenha saldo em conta, o sistema deve exibir uma mensagem informando que não será possível sacar o dinheiro por falta de saldo
 - Todos os saques devem ser armazenados em uma variável e exibidos na operação de extrato
-- Receber argumentos apenas por nome (keyword only) 
+- **Receber argumentos apenas por nome (keyword only)** 
  
 ## Extrato:
 
 - Essa operação deve listar todos os depósitos e saques realizados na conta
 - No fim da listagem, deve ser exibido o saldo atual da conta
 - Os valores devem ser exibidos utilizando o formato R$ xxxx.xx, por exemplo: 1500.45 = R$ 1500.45
-- Receber argumentos por posição (positional only) e nome (keyword only). Argumentos posicionais: Saldo, argumentos nomeados: Extrato
+- **Receber argumentos por posição (positional only) e nome (keyword only). Argumentos posicionais: Saldo, argumentos nomeados: Extrato**
 
 ## Criar Usuário (cliente):
 
 - Deve armazenar os usuários em uma lista
-- Um usuário é comporto por: Nome, CPF, Endereço
+- Um usuário é comporto por: Nome, CPF, Data de Nascimento e Endereço
 - O Endereço é uma string com o formato: Logradouro, número - Bairro - Cidade/Estado
 - Devem ser armazenados somente números no CPF
+- A Data de Nascimento é no formato: dd/mm/aaaa
 - Não podemos cadastrar dois usuários com o mesmo CPF
 
 ## Criar Contas:
@@ -173,13 +169,12 @@ Devemos criar funções para todas as operações do sistema. Cada função ter�
 - Uma conta é comporto por: Agência, Número da Conta e Usuário
 - O Número da Conta é sequencial iniciando em 1
 - O número da Agência é fixo: "0001"
-- O usuário pode ter mais de uma conta, mas uma conta pertence somente a um usuário.
-
+- O usuário pode ter mais de uma conta, mas uma conta pertence somente a um usuário
 
 
 # Projeto v2
 
-Houveram implementações e reestruturações no código da versão 1. Procurou-se manter as boas práticas de programação e a aplicação de princípios [SOLID](https://www.dio.me/articles/mentoria-codigo-limpo-solid-e-boas-praticas) para a construção de um código limpo e de fácil manutenção.
+Houveram implementações e reestruturações no código da <a href = "#Projeto-v1">versão 1</a>. Procurou-se manter as boas práticas de programação e a aplicação de princípios [SOLID](https://www.dio.me/articles/mentoria-codigo-limpo-solid-e-boas-praticas) para a construção de um código limpo e de fácil manutenção.
 
 ## Menu
 
@@ -231,7 +226,7 @@ Foram inseridas as alterações nos atributos seguindo a regra de negócio, mant
 
 ## Funções de Cadastro
 
-Para evitar a repetição de código, foi criada uma função **procura_usuario()** que através de **list comprehsions** filtra o usuário através do CPF, dessa forma, evita-se duplicidade de dados e colabora com a manipulação das listas.
+Para evitar a repetição de código, foi criada uma função **procura_usuario()** que através de [list comprehensions](https://docs.python.org/2/tutorial/datastructures.html#list-comprehensions) filtra o usuário através do CPF, dessa forma, evita-se duplicidade de dados e colabora com a manipulação das listas.
 
 ```python
 def procura_usuario(cpf, usuarios):
@@ -291,8 +286,6 @@ def listar_contas(contas):
 git clone https://github.com/PhilTisoni/DIO_Bank.git
 ```
 O projeto deverá ser clonado para a sua pasta. Abra o arquivo .py em seu compilador de preferência.
-
-
 
 
 # Autor

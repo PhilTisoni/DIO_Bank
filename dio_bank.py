@@ -1,6 +1,5 @@
 import os
 
-
 class Menu:
     def __init__(self, saldo, depositos, saques, limite_diario, quantidade_saques_realizados):
         self.saldo = saldo

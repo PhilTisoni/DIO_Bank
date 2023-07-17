@@ -13,7 +13,7 @@ Desenolvido em Julho de 2023 durante o bootcamp **Potência Tech Powered by iFoo
 
 - <a href = "#Regras-de-Negócio-v1">Regras de Negócio v1</a>
 - <a href = "#Projeto-v1">Projeto v1</a>
-- <a href = "##Implementações-para-a-Versão-2">Implementações para a Versão 2</a>
+- <a href = "#Implementações-para-a-Versão-2">Implementações para a Versão 2</a>
 
   
 # Regras de Negócio v1
@@ -127,7 +127,7 @@ menu.exibir()
 
 - <a href = "#Regras-de-Negócio-v2">Regras de Negócio v2</a>
 - <a href = "#Projeto-v2">Projeto v2</a>
-- <a href = "##Implementações-para-a-Versão-3">Implementações para a Versão 3</a>
+- <a href = "#Implementações-para-a-Versão-3">Implementações para a Versão 3</a>
 
   
 # Regras de Negócio v2
@@ -261,7 +261,7 @@ def listar_contas(contas):
             print('----------------------------------\n')
 ```
 
-# Próximos Passos
+# Implementações para a Versão 3
 
 - [ ] Separar as funções em classes
 - [ ] Organizar o Menu em Sub-Menus

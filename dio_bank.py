@@ -15,47 +15,47 @@ def exibir_menu(saldo, depositos, saques, saques_realizados, usuarios, contas, n
         print('--------------------------------------\n')
         selecao = input('Digite o número da opção desejada: ')
 
-        if selecao == '1':
-            limpar_tela()
-            usuarios = cadastrar_usuario(usuarios)
-            retornar_menu()
-        elif selecao == '2':
-            limpar_tela()
-            contas = cadastrar_conta(contas, numero_conta, usuarios)
-            numero_conta += 1
-            retornar_menu()
-        elif selecao == '3':
-            limpar_tela()
-            listar_contas(contas)
-            retornar_menu()
-        elif selecao == '4':
-            limpar_tela()
-            saldo, depositos = depositar(saldo, depositos)
-            retornar_menu()
-        elif selecao == '5':
-            limpar_tela()
-            saldo, saques, saques_realizados = sacar(
-                saldo=saldo,
-                lista_saques=saques,
-                LIMITE_SAQUE=500.00,
-                quantidade_saques_realizados=saques_realizados
-            )
-            retornar_menu()
-        elif selecao == '6':
-            limpar_tela()
-            exibir_extrato(saldo, lista_depositos=depositos, lista_saques=saques)
-            retornar_menu()
-        elif selecao == '7':
-            break
-        else:
-            print('Opção inválida.\nPor favor, digite uma das opções do menu.')
-            retornar_menu()
+    def __init__(self, saldo, depositos, saques, limite_diario, quantidade_saques_realizados):
+        self.saldo = saldo
+        self.depositos = depositos
+        self.saques = saques
+        self.limite_diario = limite_diario
+        self.quantidade_saques_realizados = quantidade_saques_realizados
 
+    def exibir(self):
+        while True:
+            self.limpar_tela()
+            print('-----------------MENU-----------------')
+            print('1 - Depósito')
+            print('2 - Saque')
+            print('3 - Extrato')
+            print('4 - Sair')
+            print('--------------------------------------\n')
+            selecao = input('Digite o número da opção desejada: ')
 
-def retornar_menu():
-    input('\n\nPressione Enter para continuar...')
+            if selecao == '1':
+                self.limpar_tela()
+                self.depositar()
+                self.retornar_menu()
+            elif selecao == '2':
+                self.limpar_tela()
+                self.sacar()
+                self.retornar_menu()
+            elif selecao == '3':
+                self.limpar_tela()
+                self.exibir_extrato()
+                self.retornar_menu()
+            elif selecao == '4':
+                break
+            else:
+                print('Opção inválida.\nPor favor, digite uma das opções do menu.')
+                self.retornar_menu()
+            
+        
+    def retornar_menu(self):
+        input('\n\nPressione Enter para continuar...')
 
-
+        
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')  # Limpa a tela do console
 
